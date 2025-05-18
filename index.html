@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Expenses & Profit Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <h1>Company Expenses & Profit Calculator</h1>
+
+  <label for="revenue">Revenue (in Crores ₹):</label>
+  <input type="number" id="revenue" value="5" step="0.01" min="0" />
+
+  <!-- Department inputs -->
+  <div class="dept-row">
+    <label>Accounts Employees:</label>
+    <input type="number" id="accounts-employees" value="7" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="accounts-salary" value="78571" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>Operations Employees:</label>
+    <input type="number" id="operations-employees" value="12" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="operations-salary" value="112500" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>Backend Employees:</label>
+    <input type="number" id="backend-employees" value="48" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="backend-salary" value="20833" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>Admin Employees:</label>
+    <input type="number" id="admin-employees" value="1" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="admin-salary" value="30000" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>HR Employees:</label>
+    <input type="number" id="hr-employees" value="1" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="hr-salary" value="30000" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>Management Employees:</label>
+    <input type="number" id="management-employees" value="3" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="management-salary" value="166666" min="0" />
+  </div>
+
+  <div class="dept-row">
+    <label>Sales Employees:</label>
+    <input type="number" id="sales-employees" value="187" min="0" />
+    <label>Avg Salary ₹:</label>
+    <input type="number" id="sales-salary" value="35000" min="0" />
+  </div>
+
+  <label for="rent">Rent Expense (₹):</label>
+  <input type="number" id="rent" value="200000" min="0" />
+
+  <button onclick="calculateExpenses()">Calculate</button>
+
+  <div class="results">
+    <p><strong>Revenue:</strong> ₹<span id="display-revenue">0</span></p>
+    <p><strong>Total Expenses:</strong> ₹<span id="total-expenses">0</span></p>
+    <p><strong>Profit:</strong> ₹<span id="profit">0</span></p>
+    <p><strong>Profit Margin:</strong> <span id="profit-margin">0</span>%</p>
+
+    <h3>Salary Breakdown:</h3>
+    <ul id="breakdown-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
